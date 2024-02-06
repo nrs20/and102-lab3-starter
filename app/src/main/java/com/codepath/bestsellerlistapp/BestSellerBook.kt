@@ -7,6 +7,8 @@ import com.google.gson.annotations.SerializedName
  *
  * SerializedName tags MUST match the JSON response for the
  * object to correctly parse with the gson library.
+ * SerializedName: used by the gson library to select which JSON key to import data from.
+ * ^Make sure they match the returned json exactly
  */
 class BestSellerBook {
     @SerializedName("rank")
@@ -21,10 +23,15 @@ class BestSellerBook {
     var author: String? = null
 
     //TODO bookImageUrl
-
+    @SerializedName("book_image")
+    var bookImageUrl: String? = null
 
     //TODO description
+    @SerializedName("description")
+    var description: String? = null
 
 
     //TODO-STRETCH-GOALS amazonUrl
+    @SerializedName("amazon_product_url")
+    var amazonUrl: String? = null
 }
